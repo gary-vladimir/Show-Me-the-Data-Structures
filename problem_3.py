@@ -2,11 +2,37 @@ import sys
 
 
 def huffman_encoding(data):
-    pass
+    huffman_dictionary = {}
+    for character in data:
+        huffman_dictionary[character] = huffman_dictionary.get(
+            character, 0) + 1
+
+    tree = {}
+    temp = '1'
+    for num in sorted(huffman_dictionary.items(), key=lambda x: x[1]):
+        tree[num[0]] = temp
+        temp = '0' + temp
+
+    encode = ''
+    for i in data:
+        encode += tree[i]
+    return encode, tree
 
 
 def huffman_decoding(data, tree):
-    pass
+    huffman = {}
+    for character in tree:
+        huffman[tree[character]] = character
+
+    temp = ''
+    decode = ''
+    for d in data:
+        if d == '1':
+            decode += huffman[temp + d]
+            temp = ''
+        else:
+            temp += d
+    return decode
 
 
 if __name__ == "__main__":
