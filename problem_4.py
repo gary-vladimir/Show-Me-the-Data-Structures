@@ -21,14 +21,11 @@ class Group(object):
 
 
 def is_user_in_group(user, group):
-    """
-    Return True if user is in the group, False otherwise.
-
-    Args:
-      user(str): user name/id
-      group(class:Group): group to check user membership against
-    """
-    return None
+    if user == group.get_name() or user in group.get_users():
+        return True
+    for g in group.get_groups():
+        return is_user_in_group(user, g)
+    return False
 
 
 parent = Group("parent")
