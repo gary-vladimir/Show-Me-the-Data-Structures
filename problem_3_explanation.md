@@ -1,4 +1,4 @@
-# Least Recently Used Cache
+# Huffman Coding
 
 > You will have to implement the logic for both encoding and decoding in the following template. Also, you will need to create the sizing schemas to present a summary.
 
