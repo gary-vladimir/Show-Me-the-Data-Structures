@@ -37,4 +37,6 @@ self.cache_dictionary[key] = value
 
 ### Run Time Analysis
 
-The complexity of this program is: `O(1)`
+The time complexity of this program is: `O(1)`
+
+The space complexity of this program is: `O(capacity)`
