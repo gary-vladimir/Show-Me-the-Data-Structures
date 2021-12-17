@@ -67,4 +67,4 @@ return linked_list
 
 ### Run Time Analysis
 
-The time complexity for union and intersection is: `O(n)`
+The time and space complexity for union and intersection is: `O(n)`
