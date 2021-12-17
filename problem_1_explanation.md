@@ -39,4 +39,4 @@ self.cache_dictionary[key] = value
 
 The time complexity of this program is: `O(1)`
 
-The space complexity of this program is: `O(capacity)`
+The space complexity of this program is: `O(n)`
