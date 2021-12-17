@@ -1,7 +1,7 @@
 import os
 
 
-def find_files(suffix, path, files=[]):
+def find_files(suffix, path, files):
     wholePath = suffix
     if path:  # if path exists
         wholePath = suffix + '/' + path  # create full path as a string
@@ -19,4 +19,6 @@ def find_files(suffix, path, files=[]):
     return files  # after everything it's done, return the files array containing the string paths
 
 
-print(find_files('.', 'testdir'))
+print(find_files('.', 'testdir', []))
+print(find_files('.', '', []))
+print(find_files('.', 'testdir/subdir1', []))
