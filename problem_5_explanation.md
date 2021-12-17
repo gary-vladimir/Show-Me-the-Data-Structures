@@ -38,7 +38,7 @@ class Linked_List:
         self.tail = None
 ```
 
-4. Code `apped()` method:
+4. Code `append()` method:
 
 ```python
     def append(self, time_stamp, value):
@@ -62,3 +62,5 @@ def time_stamp_generator():
 ### Run Time Analysis
 
 The time complexity for appending a new value to the chain is: `O(1)`
+
+The space complexity is: `O(n)`
