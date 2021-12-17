@@ -66,4 +66,6 @@ return files  # after everything it's done, return the files array containing th
 
 ### Run Time Analysis
 
-The complexity of this program is: `O(depth * average number of dictionaries in each level)`
+The time complexity of this program is: `O(depth * average number of dictionaries in each level)`
+
+The space complexity of this program is: `O(depth)`
