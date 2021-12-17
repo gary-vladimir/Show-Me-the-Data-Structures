@@ -67,3 +67,13 @@ our_cache.set(3, 3)
 print(our_cache.get(1))
 print(our_cache.get(3))
 # ---------------------------------------- #
+# Throws an exeption because of empty cache capacity
+our_cache = LRU_Cache(0)
+
+our_cache.set(1, 1)
+our_cache.set(3, 3)
+
+
+print(our_cache.get(1))
+print(our_cache.get(3))
+# ---------------------------------------- #
