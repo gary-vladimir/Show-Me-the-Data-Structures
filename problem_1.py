@@ -3,7 +3,10 @@ from collections import deque
 
 class LRU_Cache(object):
     def __init__(self, capacity):
-        self.cache_capacity = capacity
+        if capacity > 0:
+            self.cache_capacity = capacity
+        else:
+            raise Exception("Cache has a 0 or negative capacity")
         self.cache_dictionary = {}
         self.cache_deque = deque()
 
@@ -21,6 +24,8 @@ class LRU_Cache(object):
         self.cache_dictionary[key] = value
 
 
+""" Testing """
+# ---------------------------------------- #
 our_cache = LRU_Cache(5)
 
 our_cache.set(1, 1)
@@ -37,3 +42,27 @@ our_cache.set(5, 5)
 our_cache.set(6, 6)
 
 print(our_cache.get(3))      # returns 3
+# ---------------------------------------- #
+our_cache = LRU_Cache(1)
+
+our_cache.set(1, 1)
+our_cache.set(3, 3)
+
+
+print(our_cache.get(1))      # returns -1
+print(our_cache.get(2))      # returns -1
+
+our_cache.set(5, 5)
+our_cache.set(4, 4)
+
+print(our_cache.get(4))      # returns 4
+# ---------------------------------------- #
+our_cache = LRU_Cache(-2)  # Throws an exeption
+
+our_cache.set(1, 1)
+our_cache.set(3, 3)
+
+
+print(our_cache.get(1))
+print(our_cache.get(3))
+# ---------------------------------------- #
