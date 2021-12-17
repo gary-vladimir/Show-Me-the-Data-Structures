@@ -104,7 +104,7 @@ print(intersection(linked_list_1, linked_list_2))
 linked_list_3 = LinkedList()
 linked_list_4 = LinkedList()
 
-element_1 = [3, 2, 4, 35, 6, 65, 6, 4, 3, 23]
+element_1 = [3, 2, 4, 35, 6, 65, 6, 4, 3, 23]  # <= test one
 element_2 = [1, 7, 8, 9, 11, 21, 1]
 
 for i in element_1:
@@ -120,7 +120,22 @@ print(intersection(linked_list_3, linked_list_4))
 linked_list_5 = LinkedList()
 linked_list_6 = LinkedList()
 
-element_1 = [1, 2, 3]
+element_1 = [1, 2, 3]  # <= test two
+element_2 = []
+
+for i in element_1:
+    linked_list_5.append(i)
+
+for i in element_2:
+    linked_list_6.append(i)
+
+print(union(linked_list_5, linked_list_6))
+print(intersection(linked_list_5, linked_list_6))
+
+linked_list_5 = LinkedList()
+linked_list_6 = LinkedList()
+
+element_1 = []  # <= test three
 element_2 = []
 
 for i in element_1:
