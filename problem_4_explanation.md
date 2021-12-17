@@ -30,4 +30,6 @@ return False
 
 ### Run Time Analysis
 
-The complexity of this program is: `O(n)`
+The time complexity of this program is: `O(n)`
+
+The space complexity of this program is: `O(depth x number of users)`
