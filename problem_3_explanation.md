@@ -73,6 +73,6 @@ return decode
 
 ### Run Time Analysis
 
-The time complexity of this program is: `O(n)`
+The time complexity of this program is: `O(nlogn)`
 
 The space complexity of this program is: `O(unique_characters)`
