@@ -8,10 +8,10 @@ My approach to this problem was the following:
 
 1. Copy the provided helper code to my local programming IDE
 
-2. Initialize the `files` array that's going to save the returned string paths
+2. pass the `files` array that's going to save the returned string paths
 
 ```python
-def find_files(suffix, path, files=[]):
+def find_files(suffix, path, files):
 ```
 
 3. Initialize `wholePath` variable that's going to be set to the suffix, in the first iteration, it's going to be a "."
