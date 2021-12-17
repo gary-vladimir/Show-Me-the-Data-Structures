@@ -57,7 +57,8 @@ our_cache.set(4, 4)
 
 print(our_cache.get(4))      # returns 4
 # ---------------------------------------- #
-our_cache = LRU_Cache(-2)  # Throws an exeption
+# Throws an exeption because of negative cache capacity
+our_cache = LRU_Cache(-2)
 
 our_cache.set(1, 1)
 our_cache.set(3, 3)
