@@ -43,3 +43,16 @@ chain.append(time_stamp_generator(), "Cows kill more people than sharks.")
 print(chain.tail.data)
 print(chain.tail.previous_hash.data)
 print(chain.tail.previous_hash.previous_hash.data)
+
+b1 = Linked_List()
+# should print None because there is no block in b1 chain
+print(b1.head)
+
+b2 = Linked_List()
+b2.append(time_stamp_generator(), "one")
+print(b2.tail.timestamp)
+b2.append(time_stamp_generator(), "two")
+print(b2.tail.timestamp)
+b2.append(time_stamp_generator(), "three")
+# all the timestamps are same because they are declared at same time (Hrs:Min)
+print(b2.tail.timestamp)
